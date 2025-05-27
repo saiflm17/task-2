@@ -27,7 +27,7 @@ pipeline {
                 sh 'docker run -itd --name cont-01 -p 3000:3000 saikumar1817/repo-01:v1"
             }
         }
-            
-        
+    }           
+}        
         
 
