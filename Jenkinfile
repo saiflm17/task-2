@@ -8,7 +8,7 @@ pipeline {
         }
         stage("source code") {
             steps {
-                git 'https://github.com/saiflm17/task-2.git'
+                git branch: 'main', url: 'https://github.com/saiflm17/task-2.git'
             }
         }
         stage("build the code") {
