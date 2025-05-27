@@ -7,7 +7,7 @@ sudo -i - it is the command to change the root user.
 
 #STEP-2:- am installing jenkins. so jenkins before am installing java-17 version because of jenkins dependency java so am installing java-17 version.
 
-. so am collecting jenkins.io there are two repos am collecting there.
+- so am collecting jenkins.io there are two repos am collecting there.
 
 - COMMAND: yum install java-17-amazon-corretto -y.
 
