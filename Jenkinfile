@@ -1,1 +1,33 @@
+pipeline {
+    agent any
+    stages {
+        stage("workspace") {
+            steps {
+                cleanWs()
+            }
+        }
+        stage("source code") {
+            steps {
+                git 'https://github.com/saiflm17/k8s-project.git'
+            }
+        }
+        stage("build the code") {
+            steps {
+                sh "npm install"
+            }
+        }
+        stage("dockerfile") {
+            steps {
+                sh "docker build -t image01 ."
+                sh "docker tag image01 saikumar1817/repo-01:v1"
+            }
+        }
+        stage("Deploy to container") {
+            steps {
+                sh 'docker run -itd --name cont-01 -p 3000:3000 saikumar1817/repo-01:v1"
+            }
+        }
+            
+        
+        
 
